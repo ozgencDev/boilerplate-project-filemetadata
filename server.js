@@ -16,7 +16,8 @@ var app = express();
   },
 });
  */
-const upload = multer({ storage: multer.memoryStorage() });
+/* const upload = multer({ storage: multer.memoryStorage() }); */
+const upload = multer({});
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use("/public", express.static(process.cwd() + "/public"));
